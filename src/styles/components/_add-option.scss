@@ -24,7 +24,7 @@
     padding: 0 $m-size;
 }
 
-@media (min-width: 45rem) {
+@media (min-width: $desktop-breakpoint) {
     .add-option {
         flex-direction: row; 
     }
