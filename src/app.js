@@ -13,13 +13,9 @@ import { setTimeout } from 'timers';
 const store = configureStore();
 
 store.dispatch(addExpense({ description: 'Water bill', amount: 4500 }));
-store.dispatch(addExpense({ description: 'Internet bill', amount: 300  }));
-store.dispatch(setTextFilter('water'));
-console.log(store.getState());
+store.dispatch(addExpense({ description: 'Internet bill', createdAt: 1000  }));
+store.dispatch(addExpense({ description: 'Rent', amount: 109500 }));
 
-setTimeout(() => {
-    store.dispatch(setTextFilter('bill'));
-}, 3000)
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
