@@ -13,14 +13,16 @@ const ExpenseListFilters = (props) => (
         <select 
             value={props.filters.sortBy}
             onChange={(e) => { //controlled input -- input where value is controlled by JavaScript
-                if (e.target.value === "date") {
+                console.log('hit onChange');
+                console.log(e.target.value);
+                if (e.target.value === "date.") {
                     props.dispatch(sortByDate());
                 } else if (e.target.value === "amount") {
                     props.dispatch(sortByAmount());
                 }
             }}
         >
-            <option value="date">Date</option>
+            <option value="date.">Date</option>
             <option value="amount">Amount</option>
         </select>
     </div>
