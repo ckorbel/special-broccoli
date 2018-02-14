@@ -16,7 +16,7 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
                 text: action.text
             };
 
-        case 'SORT_BY_AMOUNT':
+        case 'SORT_BY_AMOUNT': 
             return {
                 ...state, 
                 sortBy: 'date'
