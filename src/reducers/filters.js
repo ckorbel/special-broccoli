@@ -16,29 +16,29 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
                 text: action.text
             };
 
-        case 'SORT_BY_AMOUNT': 
+        case 'SORT_BY_AMOUNT':
             return {
-                ...state, 
+                ...state,
                 sortBy: 'amount'
 
             }
         case 'SORT_BY_DATE':
             return {
-                ...state, 
+                ...state,
                 sortBy: 'date'
             }
         case 'SET_START_DATE':
             return {
-                ...state, 
+                ...state,
                 startDate: action.startDate
             }
         case 'SET_END_DATE':
             return {
                 ...state,
+                endDate: action.endDate
             }
-            endDate: action.endDate
-        default: 
-            return state; 
+        default:
+            return state;
     }
 };
 
